@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P3DDPYTJ1T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P3DDPYTJ1T');
+    </script>
+
+    <title>I Installed GA4 Manually — And It Didn't Work For 24 Hours</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">SEO Practical Lab</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+    </div>
+</nav>
+
+<section class="page-section" style="max-width: 800px; margin: 0 auto;">
+    <div class="blog-date">May 8, 2026</div>
+    <h1 class="page-title">I Installed GA4 Manually — And It Didn't Work For 24 Hours</h1>
+
+    <div style="line-height: 1.8; font-size: 1rem;">
+
+        <p style="margin-bottom: 1.2rem;">After GSC was set up, everyone told me I needed analytics. "You need to know who is visiting your site," they said. So I signed up for Google Analytics 4. I had no idea what it was. I just knew it was free and everyone used it.</p>
+
+        <p style="margin-bottom: 1.2rem;">I had no idea how hard it would be to install on a static HTML site. No WordPress. No plugins. No one-click install. I had to copy and paste the tracking code into every single page of my site. Manually.</p>
+
+        <p style="margin-bottom: 1.2rem;"><strong>What installing GA4 actually felt like</strong></p>
+
+        <p style="margin-bottom: 1.2rem;">I created a GA4 property. I copied the Measurement ID. I copied the big block of code Google gave me. And then I froze.</p>
+
+        <p style="margin-bottom: 1.2rem;">I had no idea where to put it. The tutorial said "paste it into the &lt;head&gt; section of every page". I didn't know what the &lt;head&gt; section was. I had to open my HTML file and look for it. I found something that said &lt;head&gt; at the top. I pasted the code there. I saved the file. I uploaded it to Cloudflare.</p>
+
+        <p style="margin-bottom: 1.2rem;">Then I did the same thing for all 4 pages of my site. Home, About, Portfolio and Blog. It took me 20 minutes. My fingers were tired.</p>
+
+        <p style="margin-bottom: 1.2rem;">I went to the GA4 real-time report. I visited my site. Nothing. I refreshed. I cleared my cache. I tried incognito. I tried my phone. Still nothing.</p>
+
+        <p style="margin-bottom: 1.2rem;"><strong>The worst 24 hours of my SEO journey</strong></p>
+
+        <p style="margin-bottom: 1.2rem;">I spent the next 3 hours troubleshooting.</p>
+
+        <ul class="about-features" style="margin-top: 1rem; margin-bottom: 1.2rem;">
+            <li>I checked the Measurement ID 10 times. It was correct.</li>
+            <li>I checked the code on every page. It was pasted correctly.</li>
+            <li>I cleared the Cloudflare cache. 5 times.</li>
+            <li>I read every "GA4 not working" guide on the internet.</li>
+        </ul>
+
+        <p style="margin-bottom: 1.2rem;">I was about to give up. Then I saw a tiny line at the bottom of Google's documentation: "It can take up to 24 hours for data to appear in your reports." 24 hours. I couldn't believe it. I had spent 3 hours panicking for no reason.</p>
+
+        <p style="margin-bottom: 1.2rem;">I went to bed. The next morning, I opened GA4. There it was: 1 user. Me. From my phone the night before. I almost cried.</p>
+
+        <p style="margin-bottom: 1.2rem;"><strong>On not having any meaningful data yet</strong></p>
+
+        <p style="margin-bottom: 1.2rem;">I understand that right now, as this website is just getting off the ground, my GA4 dashboard is completely empty, and all my analysis and optimization plans are still purely theoretical. However, I've already completed the foundational GA4 setup in advance: linking Google Search Console, enabling enhanced measurement, and configuring my core conversion events.</p>
+
+        <p style="margin-bottom: 1.2rem;">Moving forward, I won't fixate solely on traffic numbers. Instead, I'll take a user-centric approach, tracking every meaningful interaction visitors have with this site. I'll analyze which landing pages truly meet user needs, which content drives conversions, how visitors navigate through the site, and what they're actively searching for using the internal search function.</p>
+
+        <p style="margin-bottom: 1.2rem;">I'll use this real user data to guide my content creation and SEO strategy, iterating and improving continuously to make this website increasingly valuable. I invite you to join me on this journey and watch it grow.</p>
+
+    </div>
+
+    <!-- 返回博客列表按钮 -->
+    <div style="text-align: center; margin: 3rem 0 1rem;">
+        <a href="blog.html" style="display: inline-block; padding: 0.8rem 2rem; background: var(--primary-color); color: #fff; border-radius: 6px; text-decoration:none;">
+            ← Back to Blog
+        </a>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 SEO Practical Lab. All rights reserved.</p>
+</footer>
+
+<script>
+    const btn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.mobile-nav');
+    btn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        btn.textContent = nav.classList.contains('active') ? '✕' : '☰';
+    });
+</script>
+
+</body>
+</html>

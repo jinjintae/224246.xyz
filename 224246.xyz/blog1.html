@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P3DDPYTJ1T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P3DDPYTJ1T');
+    </script>
+
+    <title>How I Deployed My SEO Site — Zero Code, Just Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">SEO Practical Lab</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+    </div>
+</nav>
+
+<section class="page-section" style="max-width: 800px; margin: 0 auto;">
+    <div class="blog-date">May 6, 2026</div>
+    <h1 class="page-title">How I Deployed My SEO Site <br> — Zero Code, Just Tutorials</h1>
+
+    <div style="line-height: 1.8; font-size: 1rem;">
+        <p style="margin-bottom: 1.2rem;">I still remember holding my breath the second I clicked "Deploy".</p>
+        <p style="margin-bottom: 1.2rem;">Two weeks ago, I knew nothing. No commands, no Git, not even what "build settings" meant. The whole process felt like walking in a dark room. I had no idea what any step did, no idea what would happen next. I just followed the tutorial one click at a time, terrified of pressing the wrong button.</p>
+        <p style="margin-bottom: 1.2rem;">But I knew SEO is learned by doing, not reading. I needed a live site to practice on. That's why I chose Cloudflare Pages — it was free, and it let me upload my local folder directly. No fancy tools, no complicated setup. That was the only reason I picked it.</p>
+
+        <p style="margin-bottom: 1.2rem;"><strong>What did I actually go through? <br></strong></p>
+      
+        
+        <!-- 改成和about.html一致的列表格式 -->
+        <ul class="about-features" style="margin-top: 1rem; margin-bottom: 1.2rem;">
+            <li>I didn't know where to create a new project.</li>
+            <li>I didn't know if I should fill in the build settings… so I left them blank.</li>
+            <li>I didn't know if my file structure was correct — I just uploaded the folder I had on my desktop.</li>
+            <li>I didn't know if I was clicking the right buttons… so I clicked slowly, double-checking every step three times.</li>
+        </ul>
+
+        <p style="margin-bottom: 1.2rem;">Not dramatic error messages. Just confusion. Lots and lots of confusion. I was completely dependent on the tutorial. If it didn't tell me what to do next, I froze.</p>
+        <p style="margin-bottom: 1.2rem;"><strong>The hardest part: connecting my custom domain</strong></p>
+        <p style="margin-bottom: 1.2rem;">Once the site worked on the default Cloudflare domain, I had to connect my own.<br>        <p style="margin-bottom: 1.2rem;">Again — I had absolutely no idea what I was doing.<br>
+        <p style="margin-bottom: 1.2rem;">I didn't understand DNS. I didn't know what a CNAME record was. I didn't know why I had to add those records at all.<br>
+        <p style="margin-bottom: 1.2rem;">I just copied exactly what the tutorial showed:</p>
+        
+        <!-- 第二个列表也改成一致格式 -->
+        <ul class="about-features" style="margin-top: 1rem; margin-bottom: 1.2rem;">
+            <li>Added the CNAME record</li>
+            <li>Saved the settings</li>
+            <li>Refreshed every 10 minutes</li>
+            <li>Panicked a little when it didn't load right away</li>
+        </ul>
+
+        <p style="margin-bottom: 1.2rem;">About two hours later, it finally worked.<br>
+        <p style="margin-bottom: 1.2rem;">I felt such a huge sense of relief — not because I understood everything, but because I kept going. Even when I was lost, even when I had no clue what to do next, I kept looking for answers.</p>
+        <p style="margin-bottom: 1.2rem;"><strong>The real lesson I learned</strong></p>
+        <p style="margin-bottom: 1.2rem;">You don't need to understand every technical detail to launch a site.<br>As a beginner, all you need is:</p>
+        
+        <!-- 第三个列表改成一致格式 -->
+        <ul class="about-features" style="margin-top: 1rem; margin-bottom: 1.2rem;">
+            <li>Follow reliable tutorials</li>
+            <li>Take it one step at a time</li>
+            <li>Don't give up when you get stuck</li>
+            <li>Be patient</li>
+        </ul>
+
+        <p style="margin-bottom: 1.2rem;">The screenshot you see in my portfolio is from that exact day: my first successful deployment.<br>It's simple. It's small. But it's 100% real.</p>
+    </div>
+
+<!-- 返回博客列表按钮 -->
+<div style="text-align: center; margin: 3rem 0 1rem;">
+    <a href="blog.html" style="display: inline-block; padding: 0.8rem 2rem; background: var(--primary-color); color: #fff; border-radius: 6px; text-decoration: none;">
+        ← Back to Blog
+    </a>
+</div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 SEO Practical Lab. All rights reserved.</p>
+</footer>
+
+<script>
+    const btn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.mobile-nav');
+    btn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        btn.textContent = nav.classList.contains('active') ? '✕' : '☰';
+    });
+</script>
+
+</body>
+</html>

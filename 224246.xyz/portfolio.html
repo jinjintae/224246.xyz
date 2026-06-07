@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P3DDPYTJ1T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P3DDPYTJ1T');
+    </script>
+    
+    <title>SEO Implementation Portfolio | Practical Google SEO Projects</title>
+    <meta name="description" content="Hands-on Google SEO and static website implementation portfolio. See real projects including Cloudflare deployment, GSC setup, GA4 configuration and core SEO optimization.">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* 图片点击放大灯箱样式 */
+        .img-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+        .img-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+
+        /* 移动端适配样式 - 仅新增/调整这部分 */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 15px; /* 移动端左右内边距 */
+        }
+
+        .portfolio-card {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-card img {
+            max-width: 100%; /* 确保图片不溢出 */
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            margin-bottom: 15px;
+            cursor: zoom-in;
+        }
+
+        .portfolio-card h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.1rem; /* 移动端标题字号优化 */
+        }
+
+        .portfolio-card p {
+            margin: 0;
+            line-height: 1.6;
+            color: #555;
+            font-size: 0.95rem; /* 移动端正文字号优化 */
+        }
+
+        /* 移动端响应式断点 */
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr; /* 移动端单列布局 */
+                gap: 20px; /* 移动端卡片间距缩小 */
+                padding: 0 15px;
+            }
+
+            .portfolio-card {
+                padding: 20px 15px; /* 移动端卡片内边距缩小 */
+            }
+
+            .hero-content p {
+                padding: 0 15px; /* 正文左右内边距 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">SEO Practical Lab</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- 移动端导航适配（复用style.css的mobile-nav样式） -->
+    <div class="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hands-On SEO Implementation</h1>
+            <h2>Real Projects I Built and Optimized From Scratch</h2>
+            <p style="margin-bottom: 50px;">Below are practical SEO and web development projects I completed independently. All work was done without prior professional experience.</p>
+
+            <!-- 重构为统一的portfolio-grid容器，优化移动端布局 -->
+            <div class="portfolio-grid">
+                <!-- 卡片1：Cloudflare -->
+                <div class="portfolio-card">
+                    <h3>1. Cloudflare Pages Static Website Deployment</h3>
+                    <img src="images/portfolio/cf-deployment.png" alt="Cloudflare Pages Deployment" 
+                    loading="lazy" onclick="openImage(this.src)">
+                    <p>Custom domain + DNS + HTTPS + global CDN</p>
+                </div>
+
+                <!-- 卡片2：GSC -->
+                <div class="portfolio-card">
+                    <h3>2. Google Search Console (GSC) Setup</h3>
+                    <img src="images/portfolio/gsc-verification.png" alt="Google Search Console Setup" 
+                    loading="lazy" onclick="openImage(this.src)">
+                    <p>Full domain verification + sitemap submission</p>
+                </div>
+
+                <!-- 卡片3：GA4 -->
+                <div class="portfolio-card">
+                    <h3>3. Google Analytics 4 (GA4) Integration</h3>
+                    <img src="images/portfolio/ga4-setup.png" alt="GA4 Analytics Configuration" 
+                    loading="lazy" onclick="openImage(this.src)">
+                    <p>Live user tracking with GA4: Real visitor data collected</p>
+                </div>
+
+                <!-- 卡片4：SEO基础 -->
+                <div class="portfolio-card">
+                    <h3>4. Core SEO Foundation Setup</h3>
+                    <img src="images/portfolio/seo-sitemap.png" alt="Core SEO Configuration" 
+                    loading="lazy" onclick="openImage(this.src)">
+                    <p>Sitemap + robots.txt + meta tags optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 图片点击放大层 -->
+    <div class="img-modal" id="imgModal" onclick="closeImage()">
+        <img id="modalImg">
+
+    </div>
+<!-- 修复间距后的引导文案 + CTA按钮 -->
+<div style="max-width: 800px; margin: 0.5rem auto 0; text-align:center; padding:0 15px;">
+  <h3 style="color: #333; font-size: 1.2rem; margin-bottom: 1rem;">Dive Deeper Into Real SEO Results</h3>
+  <p style="color: #555; line-height: 1.6; margin-bottom: 2rem;">
+    Explore detailed case studies, performance data, and step-by-step implementation guides 
+    for each SEO project—with raw screenshots and actionable insights.
+  </p>
+  <a href="blog.html" style="display:inline-block; padding:12px 28px; background:#8a6d52; color:#fff; border:1px solid #8a6d52; border-radius:6px; text-decoration:none; font-size:15px; transition:all 0.3s ease;">
+    View Detailed SEO Case Studies →
+  </a>
+</div>
+
+    <footer class="footer">
+        <p>&copy; 2026 SEO Practical Lab. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // 移动端菜单（复用index.html的逻辑，确保功能一致）
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.mobile-nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileMenuBtn.textContent = mobileNav.classList.contains('active') ? '✕' : '☰';
+        });
+
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+
+        // 图片点击放大功能
+        function openImage(src) {
+            document.getElementById('imgModal').style.display = 'flex';
+            document.getElementById('modalImg').src = src;
+        }
+        function closeImage() {
+            document.getElementById('imgModal').style.display = 'none';
+        }
+    </script>
+
+    <!-- SEO 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Portfolio",
+      "name": "SEO Implementation Portfolio",
+      "description": "Hands-on Google SEO and static website implementation projects built from scratch",
+      "author": { "@type": "Person", "name": "SEO Practical Hub" }
+    }
+    </script>
+</body>
+</html>

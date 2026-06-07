@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P3DDPYTJ1T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P3DDPYTJ1T');
+    </script>
+
+    <title>Blog - SEO Practical Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-excerpt {
+            line-height: 1.65;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        .view-more-btn {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        .view-more-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">SEO Practical Lab</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+    </div>
+</nav>
+
+<div class="mobile-nav">
+    <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+</div>
+
+<section class="page-section">
+    <!-- 你要的顶部 H1 标题（最适合你） -->
+    <h1 class="page-title">Detailed SEO Case Studies</h1>
+
+    <div class="blog-grid">
+
+        <!-- ===================== BLOG 1 ===================== -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="images/blog/cf-deployment.png" alt="Cloudflare Deploy" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="blog-content">
+                <div class="blog-date">May 6, 2026</div>
+                <h2 class="blog-title">How I Deployed My SEO Site — Zero Code, Just Tutorials</h2>
+                
+                <!-- 预览文字（现在只有2行，非常短） -->
+<div class="blog-excerpt">
+    I deployed my first SEO site with zero code experience.
+    This is my real, step-by-step journey.
+</div>
+
+                <!-- 点击跳转到独立文章页 -->
+                <a href="blog1.html" class="view-more-btn">View More</a>
+            </div>
+        </div>
+
+        <!-- ===================== BLOG 2 ===================== -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="images/blog/gsc-verification.png" alt="GSC verification" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="blog-content">
+                <div class="blog-date">May 7, 2026</div>
+                <h2 class="blog-title">I Set Up Google Search Console — And Had No Idea What I Was Doing</h2>
+                
+                <!-- 预览文字（现在只有2行，非常短） -->
+<div class="blog-excerpt">
+    My real GSC setup experience as a beginner.
+    Confusion, patience, and finally success.
+</div>
+
+                <!-- 点击跳转到独立文章页 -->
+                <a href="blog2.html" class="view-more-btn">View More</a>
+            </div>
+        </div>
+
+        <!-- ===================== BLOG 3 ===================== -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="images/blog/ga4-setup.png" alt="GA4 setup" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="blog-content">
+                <div class="blog-date">May 8, 2026</div>
+                <h2 class="blog-title">I Installed GA4 Manually — And It Didn't Work For 24 Hours</h2>
+                
+                <!-- 预览文字（现在只有2行，非常短） -->
+<div class="blog-excerpt">
+     I added GA4 to my static site.
+     This is what I learned.
+     Including my future data analysis strategy
+</div>
+
+
+                <!-- 点击跳转到独立文章页 -->
+                <a href="blog2.html" class="view-more-btn">View More</a>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- 新增：和portfolio样式一致的返回首页CTA按钮 -->
+    <div style="max-width: 800px; margin: 4rem auto 0; text-align:center; padding:0 15px;">
+      <h3 style="color: #333; font-size: 1.2rem; margin-bottom: 1rem;">Back to Main Page</h3>
+      <p style="color: #555; line-height: 1.6; margin-bottom: 2rem;">
+        Explore all my hands-on SEO projects and practical implementations from scratch.
+      </p>
+      <a href="index.html" style="display:inline-block; padding:12px 28px; background:#8a6d52; color:#fff; border:1px solid #8a6d52; border-radius:6px; text-decoration:none; font-size:15px; transition:all 0.3s ease;">
+        Return to Home Page →
+      </a>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 SEO Practical Lab. All rights reserved.</p>
+</footer>
+
+<script>
+    const btn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.mobile-nav');
+    btn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        btn.textContent = nav.classList.contains('active') ? '✕' : '☰';
+    });
+</script>
+
+</body>
+</html>
